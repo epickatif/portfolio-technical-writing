@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-white;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'pnum' 1, 'tnum' 0, 'onum' 1, 'lnum' 0, 'dlig' 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'dlig' 1;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.7;
+    letter-spacing: -0.005em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors;
+  }
+
+  /* Typography Classes */
+  .text-display-xl {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+    line-height: 0.9;
+  }
+
+  .text-display-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    line-height: 1.1;
+  }
+
+  .text-display-md {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight;
+    line-height: 1.2;
+  }
+
+  .text-body-lg {
+    @apply text-lg md:text-xl leading-relaxed;
+    letter-spacing: -0.01em;
+  }
+
+  /* Effects */
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/50;
+  }
+
+  .shadow-custom {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .shadow-custom-lg {
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 bg-clip-text text-transparent;
+  }
+
+  /* Vibrant Purple Theme Colors */
+  .text-primary {
+    @apply text-purple-600;
+  }
+
+  .text-secondary {
+    @apply text-fuchsia-600;
+  }
+
+  .bg-primary {
+    @apply bg-purple-600;
+  }
+
+  .bg-secondary {
+    @apply bg-fuchsia-600;
+  }
+
+  .border-primary {
+    @apply border-purple-300;
+  }
+
+  .hover-primary {
+    @apply hover:text-purple-600;
+  }
+
+
+}
